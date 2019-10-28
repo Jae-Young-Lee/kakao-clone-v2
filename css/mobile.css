@@ -1,0 +1,57 @@
+@keyframes textAni {
+  0% {
+    font-size: 1em;
+  }
+  50% {
+    font-size: 1.1em;
+  }
+  100% {
+    font-size: 1em;
+  }
+}
+
+@keyframes textAnirotate {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.bigScreen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fce006;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 22px;
+  color: #202020;
+  padding: 0px 20px;
+  text-align: center;
+  line-height: 1.5;
+  animation: textAni 0.5s ease-in-out infinite;
+  display: none;
+  z-index: 4;
+}
+
+.bigScreen .bigScreen__text {
+  animation: textAnirotate 1s ease-in-out infinite;
+}
+
+@media screen and (min-width: 550px) {
+  .bigScreen {
+    display: flex;
+  }
+}
