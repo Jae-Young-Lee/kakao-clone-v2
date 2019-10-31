@@ -27,13 +27,35 @@
   right: -7px;
   color: #fff;
   background-color: #dc5d46;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   font-size: 10px;
+}
+
+@keyframes ringscale {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.nav .nav__badge-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #dc5d46;
+  border-radius: 50%;
+  animation: ringscale 0.9s ease-in infinite;
 }
 
 @keyframes showNavBar {

@@ -4,13 +4,14 @@
 
 .find .find__header-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .find .header-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 110px;
 }
 
 .find .header-btn__title {
@@ -33,4 +34,41 @@
   font-size: 12px;
   color: #707070;
   margin-bottom: 20px;
+}
+
+.find__friend {
+  cursor: pointer;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.find__friend:last-child {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+
+.find__friend .friend__column {
+  overflow: hidden;
+}
+
+@keyframes btnmove {
+  0% {
+    margin-right: -120px;
+    opacity: 0;
+  }
+  90% {
+    margin-right: 5px;
+  }
+  100% {
+    margin-right: 0px;
+    opacity: 1;
+  }
+}
+
+.find__friend .friend__add-btn {
+  margin-right: -120px;
+  animation: btnmove 0.3s ease-out forwards;
+  animation-delay: 0.4s;
 }

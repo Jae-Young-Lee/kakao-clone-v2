@@ -47,4 +47,7 @@
 .suggestion__icon i {
   font-size: 28px;
   color: #fff;
+  display: inline-block;
+  min-width: 30px;
+  text-align: center;
 }
